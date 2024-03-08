@@ -13,10 +13,15 @@ public class PlatformPlayerController : MonoBehaviour
     private bool isGrounded;
     private float horizontalInput;
 
+    public AudioClip jumpSound;
+    private AudioSource playerAudio;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        playerAudio = GetComponent<AudioSource>();
 
         if (groundCheck == null)
         {
@@ -32,6 +37,7 @@ public class PlatformPlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            playerAudio.PlayOneShot(jumpSound, 1.0f);
         }
     }
 
