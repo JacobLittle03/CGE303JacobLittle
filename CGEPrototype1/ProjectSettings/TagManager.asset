@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - CollisonTag
   layers:
   - Default
   - TransparentFX
@@ -43,4 +44,10 @@ TagManager:
     locked: 0
   - name: Platforms
     uniqueID: 140786481
+    locked: 0
+  - name: Decorations
+    uniqueID: 3924092301
+    locked: 0
+  - name: Background
+    uniqueID: 1314996351
     locked: 0
